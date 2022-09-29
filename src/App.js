@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MiPrimerComponente from "./componentes/MiPrimerComponente/MiPrimerComponente";
+import PersonCard from "./componentes/PersonCard/PersonCard";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+/*
+Inicializar proyecto: npm start
+Detener el proyecto: Ctrl+C
+*/
+
+class App extends React.Component {
+
+  render() {
+    return(
+      <div className="container">
+        <h1>Mi primera Aplicación con React</h1>
+        <h2>wuju!</h2>
+        <MiPrimerComponente />
+        <PersonCard />
+        <PersonCard />
+        <PersonCard />
+      </div>
+    );
+  }
+
 }
 
 export default App;

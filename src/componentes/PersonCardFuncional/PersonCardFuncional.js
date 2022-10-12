@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 const PersonCardFuncional = ({firstName, lastName, age, city}) => {
     
     //useState
@@ -6,6 +6,14 @@ const PersonCardFuncional = ({firstName, lastName, age, city}) => {
 
     const [edoCivil, setEdoCivil] = useState("Soltero");
     const [edad, setEdad] = useState(age);
+
+    /* useEffect se ejecuta al montar y al actualizar algo de nuestro estado 
+    El segundo parámetro es una lista de todos los estados que queremos escuchar
+    Si dejamos la lista vacía, solo se ejecuta la función cuando se monta el componente
+    */
+    useEffect(() => {
+        console.log("Se montó o hubo algún cambio")
+    }, [])
 
     const cambiarEdoCivil = () => {
         if(edoCivil === "Soltero"){
